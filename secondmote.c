@@ -124,11 +124,12 @@ static void
 trickle_recv(struct trickle_conn *c)
 { 
 	//packetbuf_set_datalen(64);
-uint8_t* root=(uint8_t*)packetbuf_dataptr();
+
+	uint8_t* root=(uint8_t*)packetbuf_dataptr();
 	uint8_t *data=(uint8_t*)packetbuf_dataptr();
 
 	
-printf("%d %d\n",*root,prevroot);
+	printf("%d %d\n",*root,prevroot);
 	float image1[64],image2[64],result1[64],result2[64],inverseres[64];
 	int i;
 	int datalen=packetbuf_datalen();
@@ -198,7 +199,7 @@ PROCESS_THREAD(example_trickle_process, ev, data)
 		PROCESS_WAIT_EVENT_UNTIL(ev == sensors_event &&data == &button_sensor);	
 		uint8_t arr[100];
 	int i;
-	arr[0]=&rimeaddr_node_addr;
+	arr[0]=16;
 	for(i=1;i<100;i++)
 	{
 		arr[i]=i;

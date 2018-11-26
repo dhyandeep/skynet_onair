@@ -8,6 +8,6 @@ In this project, different image fusion algorithms  were studied, analyzed and 
 
 Implemented this  algorithm in a real time WSN with TI MSP430 processor (Zigbee based). Evaluated the  performance of implemented Algorithms. 
 
-Built with:
+#### Built with:
 
 Contiki OS, TMote Sky boards
